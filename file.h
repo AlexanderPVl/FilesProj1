@@ -5,15 +5,15 @@ typedef char* string;
 
 string EnterStr(string Dep)
 {
-	int i = 0, len = 50;
+	int i = 0, len = 15;
 	char c;
-	string Str = (string)malloc(10 * sizeof(char));
-	printf("Please, enter your string\n");
-	while ((c = getchar()) != '\n')
+	string Str = (string)malloc(len * sizeof(char));
+	printf("Please, enter your string\nPlease, end it with \";\"\n");
+	while ((c = getchar()) != ';')
 	{
 		if (i >= len)
 		{
-			len += 50;
+			len += len;
 			Str = (string)realloc(Str, len*sizeof(char));
 		}
 		Str[i++] = c;
@@ -52,7 +52,7 @@ int PrintToFile(string NOF, string Str)
 		printf("Operation failed\n");
 	else
 		printf("Operation succeeded");
-	while (Str[i] != '\0')
-		fputc((int)Str[i++], f);
+	/*while (Str[i] != '\0')
+		fputc((int)Str[i++], f);*/
 	fclose(f);
 }
