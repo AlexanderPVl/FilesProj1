@@ -2,6 +2,12 @@
 #include <malloc.h>
 
 typedef char* string;
+typedef char** _Data;
+typedef struct
+{
+	_Data Adres;
+	int Lins;
+} DataBase;
 
 string EnterStr(string Dep)
 {
