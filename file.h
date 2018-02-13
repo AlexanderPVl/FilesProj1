@@ -2,16 +2,10 @@
 #include <malloc.h>
 
 typedef char* string;
-typedef char** _Data;
-typedef struct
-{
-	_Data Adres;
-	int Lins;
-} DataBase;
 
 string EnterStr(string Dep)
 {
-	int i = 0, len = 15;
+	int i = 0, len = 50;
 	char c;
 	string Str = (string)malloc(len * sizeof(char));
 	printf("Please, enter your string\nPlease, end it with \";\"\n");
